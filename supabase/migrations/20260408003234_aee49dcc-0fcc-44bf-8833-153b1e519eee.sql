@@ -1,0 +1,2 @@
+CREATE POLICY "Anyone can update polizas" ON public.polizas FOR UPDATE TO public USING (true) WITH CHECK (true);
+CREATE POLICY "Anyone can delete polizas" ON public.polizas FOR DELETE TO public USING (true);
