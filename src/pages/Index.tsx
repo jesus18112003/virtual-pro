@@ -214,6 +214,16 @@ export default function Index() {
 
   return (
     <div className="min-h-screen bg-background p-4 md:p-8 relative overflow-hidden">
+      {/* Premium gradient background — only in dark mode */}
+      <div
+        aria-hidden="true"
+        className="hidden dark:block pointer-events-none fixed inset-0 -z-10 bg-cover bg-center opacity-90"
+        style={{ backgroundImage: `url(${voBg})` }}
+      />
+      <div
+        aria-hidden="true"
+        className="hidden dark:block pointer-events-none fixed inset-0 -z-10 bg-background/60"
+      />
       {/* Decorative isotipo — Virtual Origin portal */}
       <img
         src={voIsotipo}
@@ -232,7 +242,8 @@ export default function Index() {
         {/* Header */}
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 animate-fade-up">
           <div className="flex items-center gap-4">
-            <img src={voLogo} alt="Virtual Origin" className="h-14 sm:h-16 w-auto dark:invert dark:brightness-200" />
+            <img src={voLogo} alt="Virtual Origin" className="h-14 sm:h-16 w-auto block dark:hidden" />
+            <img src={voLogoDark} alt="Virtual Origin" className="h-14 sm:h-16 w-auto hidden dark:block" />
             <div className="hidden sm:block h-12 w-px bg-border" />
             <div>
               <h1 className="text-2xl sm:text-3xl font-black tracking-tight text-foreground">
