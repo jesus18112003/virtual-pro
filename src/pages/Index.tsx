@@ -21,6 +21,8 @@ import { InvestmentGoalCard } from "@/components/InvestmentGoalCard";
 import { Button } from "@/components/ui/button";
 import { Calendar } from "@/components/ui/calendar";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
+import voLogo from "@/assets/vo-logo.png";
+import voIsotipo from "@/assets/vo-isotipo.png";
 
 export default function Index() {
   const [dateFrom, setDateFrom] = useState<Date | undefined>(() => {
