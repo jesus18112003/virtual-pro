@@ -137,3 +137,22 @@
 .animate-float-slow {
   animation: float-slow 8s ease-in-out infinite;
 }
+
+/* Premium mesh gradient background — dark mode aurora */
+.vo-mesh-bg {
+  background-color: #020617;
+  background-image:
+    radial-gradient(at 18% 28%, hsla(195, 95%, 55%, 0.55) 0px, transparent 55%),
+    radial-gradient(at 78% 18%, hsla(258, 90%, 62%, 0.50) 0px, transparent 50%),
+    radial-gradient(at 88% 75%, hsla(225, 85%, 55%, 0.45) 0px, transparent 55%),
+    radial-gradient(at 12% 82%, hsla(270, 80%, 50%, 0.40) 0px, transparent 55%),
+    radial-gradient(at 50% 50%, hsla(245, 70%, 35%, 0.35) 0px, transparent 60%);
+  background-size: 200% 200%;
+  animation: mesh-drift 28s ease-in-out infinite;
+}
+
+@keyframes mesh-drift {
+  0%, 100% { background-position: 0% 0%, 100% 0%, 100% 100%, 0% 100%, 50% 50%; }
+  50%      { background-position: 10% 15%, 85% 25%, 90% 85%, 15% 75%, 55% 45%; }
+}
+
