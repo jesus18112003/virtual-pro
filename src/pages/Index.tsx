@@ -214,14 +214,14 @@ export default function Index() {
 
   return (
     <div className="min-h-screen bg-background p-4 md:p-8 relative overflow-hidden">
-      {/* Premium gradient background — only in dark mode */}
+      {/* Premium mesh gradient — dark mode only */}
       <div
         aria-hidden="true"
-        className="hidden dark:block pointer-events-none fixed inset-0 -z-10 bg-no-repeat"
-        style={{
-          backgroundImage: `url(${voBg})`,
-          backgroundSize: '100% 100%',
-        }}
+        className="hidden dark:block pointer-events-none fixed inset-0 -z-10 vo-mesh-bg"
+      />
+      <div
+        aria-hidden="true"
+        className="hidden dark:block pointer-events-none fixed inset-0 -z-10 bg-[#020617]/30"
       />
       {/* Decorative isotipo — Virtual Origin portal */}
       <img
