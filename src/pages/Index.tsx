@@ -217,12 +217,11 @@ export default function Index() {
       {/* Premium gradient background — only in dark mode */}
       <div
         aria-hidden="true"
-        className="hidden dark:block pointer-events-none fixed inset-0 -z-10 bg-cover bg-center opacity-90"
-        style={{ backgroundImage: `url(${voBg})` }}
-      />
-      <div
-        aria-hidden="true"
-        className="hidden dark:block pointer-events-none fixed inset-0 -z-10 bg-background/60"
+        className="hidden dark:block pointer-events-none fixed inset-0 -z-10 bg-no-repeat"
+        style={{
+          backgroundImage: `url(${voBg})`,
+          backgroundSize: '100% 100%',
+        }}
       />
       {/* Decorative isotipo — Virtual Origin portal */}
       <img
