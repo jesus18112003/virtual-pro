@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,103 +6,106 @@
 
 @layer base {
   :root {
-    --background: 0 0% 98%;
-    --foreground: 0 0% 10%;
+    /* Virtual Origin — Light */
+    --background: 252 38% 96%;        /* lavender mist #F3F0F9 */
+    --foreground: 232 38% 9%;         /* deep space */
 
     --card: 0 0% 100%;
-    --card-foreground: 0 0% 10%;
+    --card-foreground: 232 38% 9%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 10%;
+    --popover-foreground: 232 38% 9%;
 
-    --primary: 213 94% 55%;
+    --primary: 245 49% 40%;           /* electric portal #393496 */
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 0 0% 92%;
-    --secondary-foreground: 0 0% 20%;
+    --secondary: 252 38% 92%;
+    --secondary-foreground: 232 38% 15%;
 
-    --muted: 0 0% 94%;
-    --muted-foreground: 0 0% 40%;
+    --muted: 252 30% 93%;
+    --muted-foreground: 232 15% 40%;
 
-    --accent: 213 94% 55%;
+    --accent: 254 56% 67%;            /* lighter violet */
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 0 0% 85%;
-    --input: 0 0% 85%;
-    --ring: 213 94% 55%;
+    --border: 252 25% 86%;
+    --input: 252 25% 86%;
+    --ring: 245 49% 40%;
 
     --radius: 0.75rem;
 
-    --chart-1: 213 94% 55%;
-    --chart-2: 160 60% 45%;
-    --chart-3: 38 92% 50%;
-    --chart-4: 340 75% 55%;
-    --chart-5: 270 60% 55%;
+    --chart-1: 245 49% 40%;
+    --chart-2: 254 40% 60%;
+    --chart-3: 270 60% 70%;
+    --chart-4: 220 70% 55%;
+    --chart-5: 280 50% 50%;
 
-    --sidebar-background: 0 0% 97%;
-    --sidebar-foreground: 0 0% 20%;
-    --sidebar-primary: 213 94% 55%;
+    --sidebar-background: 252 38% 96%;
+    --sidebar-foreground: 232 38% 15%;
+    --sidebar-primary: 245 49% 40%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 0 0% 92%;
-    --sidebar-accent-foreground: 0 0% 20%;
-    --sidebar-border: 0 0% 85%;
-    --sidebar-ring: 213 94% 55%;
+    --sidebar-accent: 252 30% 92%;
+    --sidebar-accent-foreground: 232 38% 15%;
+    --sidebar-border: 252 25% 86%;
+    --sidebar-ring: 245 49% 40%;
 
-    --gold: 43 96% 56%;
-    --silver: 0 0% 75%;
-    --bronze: 29 60% 45%;
+    /* Brand-aliased accents (kept names for compatibility) */
+    --gold: 245 49% 40%;              /* primary action */
+    --silver: 254 30% 70%;
+    --bronze: 270 40% 55%;
   }
 
   .dark {
-    --background: 0 0% 0%;
-    --foreground: 0 0% 95%;
+    /* Virtual Origin — Deep Space */
+    --background: 232 38% 7%;         /* #0E1020 */
+    --foreground: 252 38% 96%;
 
-    --card: 0 0% 10%;
-    --card-foreground: 0 0% 95%;
+    --card: 232 35% 11%;
+    --card-foreground: 252 38% 96%;
 
-    --popover: 0 0% 8%;
-    --popover-foreground: 0 0% 95%;
+    --popover: 232 38% 9%;
+    --popover-foreground: 252 38% 96%;
 
-    --primary: 213 94% 55%;
-    --primary-foreground: 0 0% 100%;
+    --primary: 254 56% 67%;           /* electric portal glow */
+    --primary-foreground: 232 38% 9%;
 
-    --secondary: 0 0% 14%;
-    --secondary-foreground: 0 0% 85%;
+    --secondary: 232 30% 16%;
+    --secondary-foreground: 252 30% 90%;
 
-    --muted: 0 0% 14%;
-    --muted-foreground: 0 0% 55%;
+    --muted: 232 25% 15%;
+    --muted-foreground: 252 15% 65%;
 
-    --accent: 213 94% 55%;
+    --accent: 245 49% 50%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 0 0% 18%;
-    --input: 0 0% 18%;
-    --ring: 213 94% 55%;
+    --border: 232 25% 20%;
+    --input: 232 25% 20%;
+    --ring: 254 56% 67%;
 
-    --chart-1: 213 94% 55%;
-    --chart-2: 160 60% 45%;
-    --chart-3: 38 92% 50%;
-    --chart-4: 340 75% 55%;
-    --chart-5: 270 60% 55%;
+    --chart-1: 254 56% 67%;
+    --chart-2: 245 49% 55%;
+    --chart-3: 270 60% 70%;
+    --chart-4: 220 70% 65%;
+    --chart-5: 290 55% 70%;
 
-    --sidebar-background: 0 0% 5%;
-    --sidebar-foreground: 0 0% 85%;
-    --sidebar-primary: 213 94% 55%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 0 0% 14%;
-    --sidebar-accent-foreground: 0 0% 85%;
-    --sidebar-border: 0 0% 18%;
-    --sidebar-ring: 213 94% 55%;
+    --sidebar-background: 232 38% 7%;
+    --sidebar-foreground: 252 30% 90%;
+    --sidebar-primary: 254 56% 67%;
+    --sidebar-primary-foreground: 232 38% 9%;
+    --sidebar-accent: 232 30% 16%;
+    --sidebar-accent-foreground: 252 30% 90%;
+    --sidebar-border: 232 25% 20%;
+    --sidebar-ring: 254 56% 67%;
 
-    --gold: 43 96% 56%;
-    --silver: 0 0% 75%;
-    --bronze: 29 60% 45%;
+    --gold: 254 56% 67%;
+    --silver: 254 25% 75%;
+    --bronze: 270 40% 60%;
   }
 }
 
@@ -114,9 +117,23 @@
   body {
     @apply bg-background text-foreground font-sans antialiased;
   }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', system-ui, sans-serif;
+    letter-spacing: -0.01em;
+  }
 }
 
 @keyframes shimmer {
   0% { background-position: 200% 0; }
   100% { background-position: -200% 0; }
+}
+
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-10px) rotate(3deg); }
+}
+
+.animate-float-slow {
+  animation: float-slow 8s ease-in-out infinite;
 }

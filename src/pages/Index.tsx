@@ -21,6 +21,8 @@ import { InvestmentGoalCard } from "@/components/InvestmentGoalCard";
 import { Button } from "@/components/ui/button";
 import { Calendar } from "@/components/ui/calendar";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
+import voLogo from "@/assets/vo-logo.png";
+import voIsotipo from "@/assets/vo-isotipo.png";
 
 export default function Index() {
   const [dateFrom, setDateFrom] = useState<Date | undefined>(() => {
@@ -209,15 +211,33 @@ export default function Index() {
   }
 
   return (
-    <div className="min-h-screen bg-background p-4 md:p-8">
-      <div className="max-w-7xl mx-auto space-y-6">
+    <div className="min-h-screen bg-background p-4 md:p-8 relative overflow-hidden">
+      {/* Decorative isotipo — Virtual Origin portal */}
+      <img
+        src={voIsotipo}
+        alt=""
+        aria-hidden="true"
+        className="pointer-events-none select-none absolute -right-32 -top-32 w-[28rem] opacity-[0.06] dark:opacity-[0.10] animate-float-slow"
+      />
+      <img
+        src={voIsotipo}
+        alt=""
+        aria-hidden="true"
+        className="pointer-events-none select-none absolute -left-40 bottom-10 w-[22rem] opacity-[0.04] dark:opacity-[0.08] rotate-12"
+      />
+
+      <div className="max-w-7xl mx-auto space-y-6 relative">
         {/* Header */}
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 animate-fade-up">
-          <div>
-            <h1 className="text-3xl font-black tracking-tight text-foreground">
-              Sales Dashboard
-            </h1>
-            <p className="text-muted-foreground text-sm mt-1">Agent Scoreboard</p>
+          <div className="flex items-center gap-4">
+            <img src={voLogo} alt="Virtual Origin" className="h-14 sm:h-16 w-auto dark:invert dark:brightness-200" />
+            <div className="hidden sm:block h-12 w-px bg-border" />
+            <div>
+              <h1 className="text-2xl sm:text-3xl font-black tracking-tight text-foreground">
+                Sales Dashboard
+              </h1>
+              <p className="text-muted-foreground text-sm mt-0.5">Agent Scoreboard</p>
+            </div>
           </div>
 
           <div className="flex flex-wrap items-center gap-2">
