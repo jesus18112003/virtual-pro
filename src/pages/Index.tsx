@@ -22,7 +22,9 @@ import { Button } from "@/components/ui/button";
 import { Calendar } from "@/components/ui/calendar";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 import voLogo from "@/assets/vo-logo.png";
+import voLogoDark from "@/assets/vo-logo-dark.png";
 import voIsotipo from "@/assets/vo-isotipo.png";
+import voBg from "@/assets/vo-bg.png";
 
 export default function Index() {
   const [dateFrom, setDateFrom] = useState<Date | undefined>(() => {
