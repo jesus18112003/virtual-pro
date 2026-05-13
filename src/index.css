@@ -1,5 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap');
 
+@font-face {
+  font-family: 'New Astro';
+  src: url('/fonts/NewAstro-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'New Astro';
+  src: url('/fonts/NewAstro-Medium.otf') format('opentype');
+  font-weight: 500 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -130,7 +146,7 @@
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Montserrat', system-ui, sans-serif;
+    font-family: 'New Astro', 'Montserrat', system-ui, sans-serif;
     letter-spacing: -0.01em;
   }
 }
