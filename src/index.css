@@ -59,8 +59,8 @@
   }
 
   .dark {
-    /* Virtual Origin — Deep Space */
-    --background: 232 38% 7%;         /* #0E1020 */
+    /* Virtual Origin — Deep Space (transparente para mostrar imagen de fondo) */
+    --background: 232 38% 4%;         /* near-black base; el fondo real es la imagen */
     --foreground: 252 38% 96%;
 
     --card: 232 35% 11%;
@@ -116,6 +116,14 @@
 
   body {
     @apply bg-background text-foreground font-sans antialiased;
+  }
+
+  /* En dark mode el fondo real es la imagen detrás (-z-10); body transparente */
+  .dark body {
+    background-color: transparent;
+  }
+  .dark {
+    background-color: #020617;
   }
 
   /* Glassmorphism for all main containers in dark mode */
