@@ -128,7 +128,7 @@ export default function Admin() {
 
 
   const handleLogin = () => {
-    if (password === "admin1811") {
+    if (password === "Admin1305") {
       setAuthenticated(true);
     } else {
       toast.error("Contraseña incorrecta");
