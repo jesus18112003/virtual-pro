@@ -132,6 +132,11 @@
 
   body {
     @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'New Astro', 'Montserrat', system-ui, sans-serif;
+  }
+
+  button, input, select, textarea {
+    font-family: inherit;
   }
 
   /* Glassmorphism for all main containers in dark mode */
