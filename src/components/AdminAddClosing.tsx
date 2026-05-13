@@ -16,6 +16,8 @@ const KNOWN_CARRIERS: Record<string, string> = {
   moo: "MOO",
   americo: "Americo",
   américo: "Americo",
+  ame: "Americo",
+  AME: "Americo",
   nl: "NL",
   nlg: "NL",
   "national life": "NL",
