@@ -60,8 +60,7 @@
 
   .dark {
     /* Virtual Origin — Deep Space */
-    --background: 232 38% 7% / 0;  /* transparent so mesh gradient shows through */
-
+    --background: 232 38% 7%;         /* #0E1020 */
     --foreground: 252 38% 96%;
 
     --card: 232 35% 11%;
