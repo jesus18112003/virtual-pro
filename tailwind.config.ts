@@ -15,7 +15,8 @@ export default {
     extend: {
       fontFamily: {
         sans: ["Montserrat", "system-ui", "sans-serif"],
-        display: ["Montserrat", "system-ui", "sans-serif"],
+        display: ["New Astro", "Montserrat", "system-ui", "sans-serif"],
+        astro: ["New Astro", "Montserrat", "system-ui", "sans-serif"],
       },
       colors: {
         border: "hsl(var(--border))",
