@@ -118,6 +118,14 @@
     @apply bg-background text-foreground font-sans antialiased;
   }
 
+  /* En dark mode el fondo real es la imagen detrás (-z-10); body transparente */
+  .dark body {
+    background-color: transparent;
+  }
+  .dark {
+    background-color: #020617;
+  }
+
   /* Glassmorphism for all main containers in dark mode */
   .dark .bg-card {
     background-color: rgba(15, 23, 42, 0.6) !important;
