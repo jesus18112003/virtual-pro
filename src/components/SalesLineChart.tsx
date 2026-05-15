@@ -8,8 +8,8 @@ import {
   ResponsiveContainer,
   CartesianGrid,
 } from "recharts";
-import { format, eachDayOfInterval, startOfDay } from "date-fns";
-import { formatCurrency, Poliza } from "@/lib/data";
+import { format, eachDayOfInterval } from "date-fns";
+import { formatCurrency, Poliza, localDateString, toDateOnlyString } from "@/lib/data";
 import { useTheme } from "next-themes";
 
 interface SalesLineChartProps {
