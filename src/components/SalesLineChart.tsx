@@ -29,9 +29,20 @@ export function SalesLineChart({ data, dateFrom, dateTo }: SalesLineChartProps) 
       (a, b) => new Date(a.created_at).getTime() - new Date(b.created_at).getTime()
     );
 
-    const minDate = dateFrom || startOfDay(new Date(sorted[0].created_at));
-    const maxDate = dateTo || startOfDay(new Date(sorted[sorted.length - 1].created_at));
+    const parseLocal = (s: string) => {
+      const [y, m, d] = s.split("-").map(Number);
+      return new Date(y, m - 1, d);
+    };
 
+    const minStr = dateFrom
+      ? toDateOnlyString(dateFrom)
+      : localDateString(sorted[0].created_at);
+    const maxStr = dateTo
+      ? toDateOnlyString(dateTo)
+      : localDateString(sorted[sorted.length - 1].created_at);
+
+    const minDate = parseLocal(minStr);
+    const maxDate = parseLocal(maxStr);
     if (minDate > maxDate) return [];
 
     const days = eachDayOfInterval({ start: minDate, end: maxDate });
@@ -42,7 +53,7 @@ export function SalesLineChart({ data, dateFrom, dateTo }: SalesLineChartProps) 
     }
 
     for (const p of data) {
-      const key = format(startOfDay(new Date(p.created_at)), "yyyy-MM-dd");
+      const key = localDateString(p.created_at);
       if (dayMap.has(key)) {
         dayMap.set(key, (dayMap.get(key) || 0) + p.monto);
       }
@@ -50,7 +61,7 @@ export function SalesLineChart({ data, dateFrom, dateTo }: SalesLineChartProps) 
 
     return Array.from(dayMap.entries()).map(([date, total]) => ({
       date,
-      label: format(new Date(date), "d MMM"),
+      label: format(parseLocal(date), "d MMM"),
       total,
     }));
   }, [data, dateFrom, dateTo]);
